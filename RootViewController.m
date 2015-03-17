@@ -8,6 +8,7 @@
 
 #import "RootViewController.h"
 #import "MagicalCreature.h"
+#import "CreatureViewController.h"
 
 @interface RootViewController ()
 <UITableViewDelegate,
@@ -49,6 +50,8 @@ UITextFieldDelegate
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+
+
     return self.magicalCreatures.count;
 }
 
@@ -63,13 +66,16 @@ UITextFieldDelegate
 }
 
 
-- (IBAction)onAddButtonPressed:(UIButton)sender {
+- (IBAction)onAddButtonPressed:(UIButton *)sender {
+    //int magicalCreatureNumber = self.magicalCreatures.count +1;
+   // NSString *magicalCreatureString = [NSString stringWithFormat:@"creature%i", magicalCreatureNumber];
+
     //adding a text field entry to the to do list array as an object
     //adding a corresponding black color object to the color array
     NSString *text = self.creatureNameTextField.text;
     NSString *detailText = self.creatureDetailsTextField.text;
-    
-    [self.magicalCreatures addObject:text];
+    MagicalCreature *magicalCreature = [[MagicalCreature alloc]initWithName:text andDetails:detailText];
+    [self.magicalCreatures addObject:magicalCreature];
 
     //hides the keyboard
     [self.creatureDetailsTextField endEditing:YES];
@@ -83,6 +89,8 @@ UITextFieldDelegate
 
     //reloads the table view to display the new data
     [self.rootTableView reloadData];
+
+    self.addButtonOutlet.enabled = NO;
 
 }
 

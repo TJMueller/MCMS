@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WBo-ZR-r3q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14A388b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WBo-ZR-r3q">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -47,6 +48,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="8zv-qQ-C78" kind="show" id="0W1-mf-Sk7"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -54,7 +58,7 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="W5A-bx-toq"/>
                                 </connections>
                             </tableView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dJW-dm-7cq">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Creature" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dJW-dm-7cq">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -62,7 +66,7 @@
                                     <rect key="frame" x="16" y="72" width="298" height="30"/>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hbc-0G-Ao7">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Details" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hbc-0G-Ao7">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -100,10 +104,10 @@
                                 <exclude reference="3mG-v1-KZb"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="TSY-eN-l0y"/>
                                 <exclude reference="H3K-XK-c5W"/>
                                 <exclude reference="WAK-WG-GYb"/>
                                 <exclude reference="wYL-vT-nSF"/>
-                                <exclude reference="TSY-eN-l0y"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -114,10 +118,10 @@
                                 <include reference="3mG-v1-KZb"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="TSY-eN-l0y"/>
                                 <include reference="H3K-XK-c5W"/>
                                 <include reference="WAK-WG-GYb"/>
                                 <include reference="wYL-vT-nSF"/>
-                                <include reference="TSY-eN-l0y"/>
                             </mask>
                         </variation>
                     </view>
@@ -132,6 +136,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1066.5" y="380"/>
+        </scene>
+        <!--Creature View Controller-->
+        <scene sceneID="dbK-mS-EF1">
+            <objects>
+                <viewController id="8zv-qQ-C78" customClass="CreatureViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="56x-RM-PRL"/>
+                        <viewControllerLayoutGuide type="bottom" id="JEQ-3O-Vby"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pQk-G4-PbC">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mrQ-Ka-qGV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1720.5" y="375"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Dss-aW-9cO">
