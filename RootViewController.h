@@ -10,6 +10,8 @@
 #import "MagicalCreature.h"
 @interface RootViewController : UIViewController
 @property MagicalCreature *creature;
+@property NSMutableArray * rvcArray;
+
 
 
 @end

@@ -12,9 +12,10 @@
 @property NSString *name;
 @property NSString *details;
 @property NSString *creatureImage;
+@property NSMutableArray *creatureAccessories;
 
 
 
--(instancetype)initWithName:(NSString *)name andDetails:(NSString *)details andCreatureImage:(NSString *)image;
+-(instancetype)initWithName:(NSString *)name andDetails:(NSString *)details andCreatureImage:(NSString *)image andCreatureAccessories:(NSMutableArray *)array ;
 
 @end

@@ -11,12 +11,13 @@
 
 @implementation MagicalCreature
 
--(instancetype)initWithName:(NSString *)name andDetails:(NSString *)details andCreatureImage:(NSString *)image {
+-(instancetype)initWithName:(NSString *)name andDetails:(NSString *)details andCreatureImage:(NSString *)image andCreatureAccessories:(NSMutableArray *)array {
     self =[super init];
     if (self) {
         self.name = name;
         self.details = details;
         self.creatureImage = image;
+        self.creatureAccessories = array;
     }
     return self;
 }

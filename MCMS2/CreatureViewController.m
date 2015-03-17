@@ -8,11 +8,12 @@
 
 #import "CreatureViewController.h"
 
-@interface CreatureViewController ()
+@interface CreatureViewController () <UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITextField *nameCVCTextField;
 @property (weak, nonatomic) IBOutlet UITextField *detailCVCTextField;
 @property (weak, nonatomic) IBOutlet UIImageView *creatureImageView;
 @property (strong, nonatomic) IBOutlet UITableView *cvcTableView;
+@property NSMutableArray *accessoryArray;
 
 @end
 
@@ -27,6 +28,7 @@
     self.detailCVCTextField.enabled = NO;
     NSString *temp = self.creature.creatureImage;
     self.creatureImageView.image = [UIImage imageNamed:temp];
+    self.accessoryArray = self.creature.creatureAccessories;
 }
 
 //On edit button
@@ -47,6 +49,19 @@
         sender.title = @"Done";
     }
 
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AccessoriesCellID"];
+    //to the left is the cell we are creating to the right is the array we are drawing from
+    NSString *accessory = [self.accessoryArray objectAtIndex:indexPath.row];
+//    NSString *temp = self.accessoryArray[indexPath.row];
+    cell.textLabel.text = accessory;
+    return cell;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.accessoryArray.count;
 }
 
 

@@ -22,7 +22,6 @@ UITextFieldDelegate
 @property (strong, nonatomic) IBOutlet UITextField *creatureDetailsTextField;
 @property (strong, nonatomic) IBOutlet UIButton *addButtonOutlet;
 @property MagicalCreature *selectedCreature;
-
 @end
 
 @implementation RootViewController
@@ -35,10 +34,12 @@ UITextFieldDelegate
     //on load disable add button
     self.addButtonOutlet.enabled = NO;
 
+    self.rvcArray = [NSMutableArray arrayWithObjects:@"Club", @"Wand", @"Hat", @"Plant", nil];
 
-    MagicalCreature *creatureOne = [[MagicalCreature alloc]initWithName:@"Sphinx" andDetails:@"Egyptian" andCreatureImage:@"creatureOne"];
-    MagicalCreature *creatureTwo = [[MagicalCreature alloc]initWithName:@"Dragon" andDetails:@"Shoots Fire" andCreatureImage:@"creatureTwo"];
-    MagicalCreature *creatureThree = [[MagicalCreature alloc]initWithName:@"Big Foot" andDetails:@"Big Shoes" andCreatureImage:@"creatureThree"];
+
+    MagicalCreature *creatureOne = [[MagicalCreature alloc]initWithName:@"Sphinx" andDetails:@"Egyptian" andCreatureImage:@"creatureOne" andCreatureAccessories:self.rvcArray];
+    MagicalCreature *creatureTwo = [[MagicalCreature alloc]initWithName:@"Dragon" andDetails:@"Shoots Fire" andCreatureImage:@"creatureTwo" andCreatureAccessories:self.rvcArray];
+    MagicalCreature *creatureThree = [[MagicalCreature alloc]initWithName:@"Big Foot" andDetails:@"Big Shoes" andCreatureImage:@"creatureThree" andCreatureAccessories:self.rvcArray];
     self.magicalCreatures = [NSMutableArray arrayWithObjects:creatureOne, creatureTwo, creatureThree, nil];
 
 }
@@ -74,7 +75,7 @@ UITextFieldDelegate
     //adding a corresponding black color object to the color array
     NSString *text = self.creatureNameTextField.text;
     NSString *detailText = self.creatureDetailsTextField.text;
-    MagicalCreature *magicalCreature = [[MagicalCreature alloc]initWithName:text andDetails:detailText andCreatureImage:@"creatureOne"];
+    MagicalCreature *magicalCreature = [[MagicalCreature alloc]initWithName:text andDetails:detailText andCreatureImage:@"creatureOne" andCreatureAccessories:self.rvcArray];
     [self.magicalCreatures addObject:magicalCreature];
 
     //hides the keyboard
