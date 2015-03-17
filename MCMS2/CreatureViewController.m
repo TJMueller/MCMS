@@ -11,6 +11,7 @@
 @interface CreatureViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *nameCVCTextField;
 @property (weak, nonatomic) IBOutlet UITextField *detailCVCTextField;
+@property (weak, nonatomic) IBOutlet UIImageView *creatureImageView;
 
 @end
 
@@ -23,6 +24,8 @@
     self.editing = NO;
     self.nameCVCTextField.enabled = NO;
     self.detailCVCTextField.enabled = NO;
+    NSString *temp = self.creature.creatureImage;
+    self.creatureImageView.image = [UIImage imageNamed:temp];
 }
 
 //On edit button

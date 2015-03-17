@@ -36,9 +36,9 @@ UITextFieldDelegate
     self.addButtonOutlet.enabled = NO;
 
 
-    MagicalCreature *creatureOne = [[MagicalCreature alloc]initWithName:@"Sphinx" andDetails:@"Egyptian"];
-    MagicalCreature *creatureTwo = [[MagicalCreature alloc]initWithName:@"Dragon" andDetails:@"Shoots Fire"];
-    MagicalCreature *creatureThree = [[MagicalCreature alloc]initWithName:@"Big Foot" andDetails:@"Big Shoes"];
+    MagicalCreature *creatureOne = [[MagicalCreature alloc]initWithName:@"Sphinx" andDetails:@"Egyptian" andCreatureImage:@"creatureOne"];
+    MagicalCreature *creatureTwo = [[MagicalCreature alloc]initWithName:@"Dragon" andDetails:@"Shoots Fire" andCreatureImage:@"creatureTwo"];
+    MagicalCreature *creatureThree = [[MagicalCreature alloc]initWithName:@"Big Foot" andDetails:@"Big Shoes" andCreatureImage:@"creatureThree"];
     self.magicalCreatures = [NSMutableArray arrayWithObjects:creatureOne, creatureTwo, creatureThree, nil];
 
 }
@@ -74,7 +74,7 @@ UITextFieldDelegate
     //adding a corresponding black color object to the color array
     NSString *text = self.creatureNameTextField.text;
     NSString *detailText = self.creatureDetailsTextField.text;
-    MagicalCreature *magicalCreature = [[MagicalCreature alloc]initWithName:text andDetails:detailText];
+    MagicalCreature *magicalCreature = [[MagicalCreature alloc]initWithName:text andDetails:detailText andCreatureImage:@"creatureOne"];
     [self.magicalCreatures addObject:magicalCreature];
 
     //hides the keyboard
@@ -101,6 +101,7 @@ UITextFieldDelegate
     CreatureViewController *vc = segue.destinationViewController;
     vc.creature =self.selectedCreature;
     vc.title = self.selectedCreature.name;
+
 }
 
 
