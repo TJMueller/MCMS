@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *nameCVCTextField;
 @property (weak, nonatomic) IBOutlet UITextField *detailCVCTextField;
 @property (weak, nonatomic) IBOutlet UIImageView *creatureImageView;
+@property (strong, nonatomic) IBOutlet UITableView *cvcTableView;
 
 @end
 

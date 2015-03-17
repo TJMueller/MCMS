@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14A388b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WBo-ZR-r3q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WBo-ZR-r3q">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -171,6 +171,22 @@
                                     <rect key="frame" x="80" y="149" width="240" height="128"/>
                                 </variation>
                             </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="yzT-jh-CRC">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AccessoriesCellID" id="fUL-5m-cPl">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fUL-5m-cPl" id="vZ2-BJ-mxI">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="51" y="323" width="299" height="257"/>
+                                </variation>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -178,6 +194,7 @@
                                 <exclude reference="Bbq-Ub-eRc"/>
                                 <exclude reference="8lU-XB-Gub"/>
                                 <exclude reference="Vbl-Na-ZfE"/>
+                                <exclude reference="yzT-jh-CRC"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -185,6 +202,7 @@
                                 <include reference="Bbq-Ub-eRc"/>
                                 <include reference="8lU-XB-Gub"/>
                                 <include reference="Vbl-Na-ZfE"/>
+                                <include reference="yzT-jh-CRC"/>
                             </mask>
                         </variation>
                     </view>
@@ -197,6 +215,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="creatureImageView" destination="Vbl-Na-ZfE" id="HZs-oj-eUX"/>
+                        <outlet property="cvcTableView" destination="yzT-jh-CRC" id="JU3-y8-6cG"/>
                         <outlet property="detailCVCTextField" destination="8lU-XB-Gub" id="qOa-Sl-9Vv"/>
                         <outlet property="nameCVCTextField" destination="Bbq-Ub-eRc" id="X6a-K8-9ND"/>
                     </connections>
