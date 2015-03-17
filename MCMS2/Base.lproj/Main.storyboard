@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14A388b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WBo-ZR-r3q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WBo-ZR-r3q">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -146,6 +146,7 @@
                         <viewControllerLayoutGuide type="bottom" id="p8P-CZ-xvZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1vU-rq-x0K">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bbq-Ub-eRc">
@@ -182,7 +183,7 @@
                     <navigationItem key="navigationItem" title="Title" id="P3y-Rr-Jnb">
                         <barButtonItem key="rightBarButtonItem" title="Edit" id="SNv-hm-Gyo">
                             <connections>
-                                <action selector="onEditButtonPressed:" destination="5lc-sw-9jC" id="2lP-n5-Hqj"/>
+                                <action selector="onEditButtonPressed:" destination="5lc-sw-9jC" id="hcB-gW-pFW"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

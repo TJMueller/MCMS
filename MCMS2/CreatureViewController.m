@@ -20,21 +20,29 @@
     [super viewDidLoad];
     self.nameCVCTextField.text = self.creature.name;
     self.detailCVCTextField.text = self.creature.details;
-
+    self.editing = NO;
+    self.nameCVCTextField.enabled = NO;
+    self.detailCVCTextField.enabled = NO;
 }
 
 //On edit button
 -(IBAction)onEditButtonPressed:(UIBarButtonItem *)sender {
-
-    //sets the editing capability on or off depending on button's title
-    //animates going both ways switching between the two
-    if ([sender.title isEqualToString:@"Edit"]) {
-        sender.title = @"Done";
-//        [self.rootTableView setEditing:YES animated:YES];
-    } else{
+    self.creature.name = self.nameCVCTextField.text;
+    self.creature.details = self.detailCVCTextField.text;
+    
+    if (self.editing) {
+        self.editing = NO;
+        self.nameCVCTextField.enabled = NO;
+        self.detailCVCTextField.enabled = NO;
         sender.title = @"Edit";
-//        [self.rootTableView setEditing:NO animated:YES];
+    } else
+    {
+        self.editing = YES;
+        self.nameCVCTextField.enabled = YES;
+        self.detailCVCTextField.enabled = YES;
+        sender.title = @"Done";
     }
+
 }
 
 

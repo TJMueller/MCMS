@@ -21,6 +21,7 @@ UITextFieldDelegate
 @property (strong, nonatomic) IBOutlet UITextField *creatureNameTextField;
 @property (strong, nonatomic) IBOutlet UITextField *creatureDetailsTextField;
 @property (strong, nonatomic) IBOutlet UIButton *addButtonOutlet;
+@property MagicalCreature *selectedCreature;
 
 @end
 
@@ -96,10 +97,19 @@ UITextFieldDelegate
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UITableViewCell *)cell {
     NSIndexPath *indexPath = [self.rootTableView indexPathForCell:cell];
-    MagicalCreature *creature = [self.magicalCreatures objectAtIndex:indexPath.row];
+    self.selectedCreature = [self.magicalCreatures objectAtIndex:indexPath.row];
     CreatureViewController *vc = segue.destinationViewController;
-    vc.creature =creature;
-    vc.title = creature.name;
+    vc.creature =self.selectedCreature;
+    vc.title = self.selectedCreature.name;
+}
+
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    if (YES)
+    {
+        [self.rootTableView reloadData];
+    }
 }
 
 
