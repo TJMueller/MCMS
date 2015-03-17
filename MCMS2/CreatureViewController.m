@@ -16,22 +16,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+On edit button
+-(IBAction)onEditButtonPressed:(UIBarButtonItem *)sender {
+
+    //sets the editing capability on or off depending on button's title
+    //animates going both ways switching between the two
+    if ([sender.title isEqualToString:@"Edit"]) {
+        sender.title = @"Done";
+        [self.rootTableView setEditing:YES animated:YES];
+    } else{
+        sender.title = @"Edit";
+        [self.rootTableView setEditing:NO animated:YES];
+    }
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

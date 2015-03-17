@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14A388b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WBo-ZR-r3q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WBo-ZR-r3q">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--MCMS-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="RootViewController" sceneMemberID="viewController">
@@ -125,7 +125,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="ov6-of-2wb"/>
+                    <navigationItem key="navigationItem" title="MCMS" id="ov6-of-2wb"/>
                     <connections>
                         <outlet property="addButtonOutlet" destination="3mG-v1-KZb" id="rIZ-VJ-K0I"/>
                         <outlet property="creatureDetailsTextField" destination="hbc-0G-Ao7" id="amv-G0-i0h"/>
@@ -146,13 +146,14 @@
                         <viewControllerLayoutGuide type="bottom" id="JEQ-3O-Vby"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="pQk-G4-PbC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mrQ-Ka-qGV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1720.5" y="375"/>
+            <point key="canvasLocation" x="1921.5" y="380"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Dss-aW-9cO">

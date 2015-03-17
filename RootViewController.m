@@ -50,8 +50,6 @@ UITextFieldDelegate
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-
-
     return self.magicalCreatures.count;
 }
 
@@ -65,6 +63,7 @@ UITextFieldDelegate
     }
 }
 
+# pragma mark - Buttons
 
 - (IBAction)onAddButtonPressed:(UIButton *)sender {
     //int magicalCreatureNumber = self.magicalCreatures.count +1;
@@ -91,7 +90,16 @@ UITextFieldDelegate
     [self.rootTableView reloadData];
 
     self.addButtonOutlet.enabled = NO;
+}
 
+#pragma mark - Segue
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UITableViewCell *)cell {
+    NSIndexPath *indexPath = [self.rootTableView indexPathForCell:cell];
+    MagicalCreature *creature = [self.magicalCreatures objectAtIndex:indexPath.row];
+    CreatureViewController *vc = segue.destinationViewController;
+    vc.creature =creature;
+    vc.title = creature.name;
 }
 
 
