@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		23B0C1E31AB8AEE300843DD3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 23B0C1E21AB8AEE300843DD3 /* main.m */; };
 		23B0C1E61AB8AEE300843DD3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 23B0C1E51AB8AEE300843DD3 /* AppDelegate.m */; };
-		23B0C1E91AB8AEE300843DD3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23B0C1E81AB8AEE300843DD3 /* ViewController.m */; };
 		23B0C1EC1AB8AEE300843DD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23B0C1EA1AB8AEE300843DD3 /* Main.storyboard */; };
 		23B0C1EE1AB8AEE300843DD3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23B0C1ED1AB8AEE300843DD3 /* Images.xcassets */; };
 		23B0C1F11AB8AEE300843DD3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23B0C1EF1AB8AEE300843DD3 /* LaunchScreen.xib */; };
 		23B0C1FD1AB8AEE300843DD3 /* MCMS2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 23B0C1FC1AB8AEE300843DD3 /* MCMS2Tests.m */; };
+		23B0C2081AB8AF5F00843DD3 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23B0C2071AB8AF5F00843DD3 /* RootViewController.m */; };
+		23B0C20B1AB8AFD200843DD3 /* MagicalCreature.m in Sources */ = {isa = PBXBuildFile; fileRef = 23B0C20A1AB8AFD200843DD3 /* MagicalCreature.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +33,16 @@
 		23B0C1E21AB8AEE300843DD3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		23B0C1E41AB8AEE300843DD3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		23B0C1E51AB8AEE300843DD3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		23B0C1E71AB8AEE300843DD3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		23B0C1E81AB8AEE300843DD3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		23B0C1EB1AB8AEE300843DD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		23B0C1ED1AB8AEE300843DD3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		23B0C1F01AB8AEE300843DD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		23B0C1F61AB8AEE300843DD3 /* MCMS2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MCMS2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23B0C1FB1AB8AEE300843DD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23B0C1FC1AB8AEE300843DD3 /* MCMS2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCMS2Tests.m; sourceTree = "<group>"; };
+		23B0C2061AB8AF5F00843DD3 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = ../RootViewController.h; sourceTree = "<group>"; };
+		23B0C2071AB8AF5F00843DD3 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = ../RootViewController.m; sourceTree = "<group>"; };
+		23B0C2091AB8AFD200843DD3 /* MagicalCreature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicalCreature.h; sourceTree = "<group>"; };
+		23B0C20A1AB8AFD200843DD3 /* MagicalCreature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicalCreature.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +86,10 @@
 			children = (
 				23B0C1E41AB8AEE300843DD3 /* AppDelegate.h */,
 				23B0C1E51AB8AEE300843DD3 /* AppDelegate.m */,
-				23B0C1E71AB8AEE300843DD3 /* ViewController.h */,
-				23B0C1E81AB8AEE300843DD3 /* ViewController.m */,
+				23B0C2061AB8AF5F00843DD3 /* RootViewController.h */,
+				23B0C2071AB8AF5F00843DD3 /* RootViewController.m */,
+				23B0C2091AB8AFD200843DD3 /* MagicalCreature.h */,
+				23B0C20A1AB8AFD200843DD3 /* MagicalCreature.m */,
 				23B0C1EA1AB8AEE300843DD3 /* Main.storyboard */,
 				23B0C1ED1AB8AEE300843DD3 /* Images.xcassets */,
 				23B0C1EF1AB8AEE300843DD3 /* LaunchScreen.xib */,
@@ -219,9 +224,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23B0C1E91AB8AEE300843DD3 /* ViewController.m in Sources */,
 				23B0C1E61AB8AEE300843DD3 /* AppDelegate.m in Sources */,
+				23B0C20B1AB8AFD200843DD3 /* MagicalCreature.m in Sources */,
 				23B0C1E31AB8AEE300843DD3 /* main.m in Sources */,
+				23B0C2081AB8AF5F00843DD3 /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
