@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WBo-ZR-r3q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14A388b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WBo-ZR-r3q">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -49,7 +49,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="8zv-qQ-C78" kind="show" id="0W1-mf-Sk7"/>
+                                            <segue destination="5lc-sw-9jC" kind="show" id="7WQ-Im-RBp"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -137,23 +137,63 @@
             </objects>
             <point key="canvasLocation" x="1066.5" y="380"/>
         </scene>
-        <!--Creature View Controller-->
-        <scene sceneID="dbK-mS-EF1">
+        <!--Title-->
+        <scene sceneID="yJo-oh-jbG">
             <objects>
-                <viewController id="8zv-qQ-C78" customClass="CreatureViewController" sceneMemberID="viewController">
+                <viewController id="5lc-sw-9jC" customClass="CreatureViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="56x-RM-PRL"/>
-                        <viewControllerLayoutGuide type="bottom" id="JEQ-3O-Vby"/>
+                        <viewControllerLayoutGuide type="top" id="vnt-qv-nWd"/>
+                        <viewControllerLayoutGuide type="bottom" id="p8P-CZ-xvZ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="pQk-G4-PbC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="view" contentMode="scaleToFill" id="1vU-rq-x0K">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bbq-Ub-eRc">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="51" y="111" width="299" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8lU-XB-Gub">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="51" y="190" width="299" height="30"/>
+                                </variation>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Bbq-Ub-eRc"/>
+                                <exclude reference="8lU-XB-Gub"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Bbq-Ub-eRc"/>
+                                <include reference="8lU-XB-Gub"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="P3y-Rr-Jnb">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="SNv-hm-Gyo">
+                            <connections>
+                                <action selector="onEditButtonPressed:" destination="5lc-sw-9jC" id="2lP-n5-Hqj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="detailCVCTextField" destination="8lU-XB-Gub" id="qOa-Sl-9Vv"/>
+                        <outlet property="nameCVCTextField" destination="Bbq-Ub-eRc" id="X6a-K8-9ND"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mrQ-Ka-qGV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rTb-UX-dw4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1921.5" y="380"/>
+            <point key="canvasLocation" x="1735.5" y="380"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Dss-aW-9cO">
