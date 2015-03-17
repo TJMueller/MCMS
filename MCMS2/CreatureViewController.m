@@ -7,6 +7,7 @@
 //
 
 #import "CreatureViewController.h"
+#import "BattleViewController.h"
 
 @interface CreatureViewController () <UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITextField *nameCVCTextField;
@@ -14,6 +15,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *creatureImageView;
 @property (strong, nonatomic) IBOutlet UITableView *cvcTableView;
 @property NSMutableArray *accessoryArray;
+@property MagicalCreature *selectedCreature;
+
 
 @end
 
@@ -29,6 +32,7 @@
     NSString *temp = self.creature.creatureImage;
     self.creatureImageView.image = [UIImage imageNamed:temp];
     self.accessoryArray = self.creature.creatureAccessories;
+    self.selectedCreature = self.creature;
 }
 
 //On edit button
@@ -64,5 +68,10 @@
     return self.accessoryArray.count;
 }
 
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UITableViewCell *)cell {
+    BattleViewController *vc = segue.destinationViewController;
+    vc.creature =self.selectedCreature;
+}
 
 @end

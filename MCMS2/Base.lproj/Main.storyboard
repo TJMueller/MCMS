@@ -1,11 +1,60 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WBo-ZR-r3q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14A388b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WBo-ZR-r3q">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Battle View Controller-->
+        <scene sceneID="B4N-ei-qh0">
+            <objects>
+                <viewController id="2nF-T5-LqI" customClass="BattleViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jcc-Oe-XVe"/>
+                        <viewControllerLayoutGuide type="bottom" id="xXW-cT-66d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aXF-6s-GLW">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GiQ-m9-zAQ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="Web-ts-TeS"/>
+                                </items>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="20" width="400" height="44"/>
+                                </variation>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gtg-Na-zH7">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="72" width="400" height="528"/>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="GiQ-m9-zAQ"/>
+                                <exclude reference="Gtg-Na-zH7"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="GiQ-m9-zAQ"/>
+                                <include reference="Gtg-Na-zH7"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="battleWinnerImageView" destination="Gtg-Na-zH7" id="AFs-F9-UrK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RZK-Q2-hRg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1066.5" y="-276"/>
+        </scene>
         <!--MCMS-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -191,6 +240,19 @@
                                     <outlet property="delegate" destination="5lc-sw-9jC" id="2r7-0y-cyV"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p2F-ap-n2K">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="BATTLE">
+                                    <color key="titleColor" red="0.94172190656565657" green="0.017459518125380994" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="72" width="55" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="2nF-T5-LqI" kind="show" id="LrE-4u-Q3l"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -199,6 +261,7 @@
                                 <exclude reference="8lU-XB-Gub"/>
                                 <exclude reference="Vbl-Na-ZfE"/>
                                 <exclude reference="yzT-jh-CRC"/>
+                                <exclude reference="p2F-ap-n2K"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -207,6 +270,7 @@
                                 <include reference="8lU-XB-Gub"/>
                                 <include reference="Vbl-Na-ZfE"/>
                                 <include reference="yzT-jh-CRC"/>
+                                <include reference="p2F-ap-n2K"/>
                             </mask>
                         </variation>
                     </view>
